@@ -1,0 +1,105 @@
+.ProfileCard {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex: 0 0 30%;
+  margin-top: 10rem;
+  border-radius: 1rem;
+  background:white;
+  box-shadow: 2px 2px 5px var(--boxshadowGrey), -2px -2px 5px #ffffff;
+}
+.ProfileImage {
+  margin: auto 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  top: 0%;
+}
+.ProfileImage--Circle {
+  display: flex !important;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px var(--boxshadowGrey), -2px -2px 5px #ffffff;
+}
+.ProfileBody {
+  flex: 1 1 auto;
+  margin:0 4rem;
+  color: #515353;
+}
+.Name--SNS{
+  display: flex;
+}
+.Name {
+  margin-top: 2.5rem;
+  font-size: 2.2rem;
+}
+.Job{
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--midGrey);
+}
+.ProfileSNS{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background: var(--background);
+  border-radius: 1rem;
+  background:white;
+}
+.SNSButton{
+  display: flex;
+  margin: auto;
+  width: 4rem;
+  height: 4rem;
+}
+
+.TwitterButton{
+  color: #00acee;
+  margin: auto;
+  width: 100%;
+}
+.GithubButton{
+  color: #171515;
+  margin: auto;
+  width: 100%;
+}
+
+
+@media (max-width: 960px) {
+  .Name {
+    font-size: 1.8rem;
+  }
+  .Job{
+    font-size: 0.8rem;
+  }
+  .Body{
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 560px) {
+  .ProfileImage--Circle {
+    width: 6rem;
+    height:6rem;
+  }
+  .ProfileCard {
+    height: 10rem;
+  }
+  .ProfileBody {
+    margin: auto 0;
+  }
+  .Name {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+  .Job {
+    font-size: 0.8rem;
+  }
+  .SNSButton{
+    height: 3rem;
+    width: 3rem;
+  }
+}

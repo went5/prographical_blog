@@ -1,0 +1,145 @@
+.PostCategoriesNav {
+  position: relative;
+  margin: 5rem 0;
+}
+
+
+.PostcategoriesTitle {
+  font-size: 4.5rem;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  border-radius: 2rem;
+  margin: 6rem 0;
+  text-shadow: 1px 1px 2px var(--boxshadowGrey), -1px -1px 2px white;
+  color: var(--secondary);
+}
+.PostCategoriesNav--Format{
+  text-align: center;
+}
+.PostCategoriesNav input[type='text'] {
+  position: relative;
+  text-align: center;
+  margin: 1rem auto;
+  width: 60%;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  border: 1px solid;
+  border-color: #e2e2e2;
+  background-color: var(--background);
+  -webkit-appearance: none;
+  text-shadow: 1px 1px rgba(white, 0.6);
+  box-shadow: 2px 2px 4px var(--boxshadowInset) inset,
+    -4px -4px 8px #ffffff inset;
+}
+
+.PostCategoriesNav input[type='text']:focus {
+  outline: none;
+}
+
+.PostCategoriesNav input[type='text']::placeholder {
+  color: var(--midGrey);
+}
+
+.PostSearchButtons {
+  display: flex;
+  width: 50%;
+  margin: 1rem auto;
+  flex-wrap: wrap;
+}
+
+.PostButton {
+  display: flex;
+  text-decoration: none;
+  outline: 0;
+  margin: 1rem auto 1rem;
+  border-radius: 1.5rem;
+  padding: 0 2rem;
+  height: 3.6rem;
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+
+.Searchicon {
+  position: absolute;
+  left: 30rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  color: #aaaaaa;
+}
+
+.PostSearch--ButtonImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  outline: 0;
+  margin: 1rem auto;
+  border-radius: 1.5rem;
+  padding: 0 1rem 0 0;
+  height: 3.6rem;
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+
+.PostSearch--ButtonIcon {
+  margin-right: 1rem;
+  fill: var(--secondary);
+}
+
+.PostButton:hover .PostSearch--ButtonImage svg,
+.PostButton:hover .PostSearch--ButtonIcon{
+  fill: var(--primary);
+}
+
+@media (max-width: 960px) {
+  .PostcategoriesTitle {
+    font-size: 3rem;
+  }
+  .PostCategoriesNav input[type='text'] {
+    position: relative;
+    width: 100%;
+  }
+  .Searchicon {
+    left: 5rem;
+  }
+  .PostSearchButtons {
+    display: flex;
+    width: 80%;
+  }
+}
+
+@media (max-width: 560px) {
+  .PostCategoriesNav{
+    margin: 0;
+  }
+  .Searchicon {
+    left: 2rem;
+  }
+  .PostCategoriesNav input[type='text'] {
+    position: relative;
+    width: 100%;
+  }
+  .PostSearchButtons {
+    justify-content: start;
+    width: 100%;
+    margin: 0;
+  }
+  .PostButton {
+    padding: 0;
+    margin:1rem auto;
+    width: 3.6rem;
+  }
+  .PostSearch--ButtonImage {
+    margin-right: 0;
+  }
+  .PostSearch--ButtonIcon {
+    margin-right: 0;
+  }
+  .PostcategoriesTitle {
+    font-size: 1.4rem;
+    margin: 1rem auto;
+    letter-spacing: 1px;
+  }
+}

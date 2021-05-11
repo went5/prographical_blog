@@ -1,0 +1,83 @@
+.PostCard {
+  position: relative;
+  text-decoration: none;
+  background: white;
+  color: inherit;
+  border-radius: var(--borderRadius);
+  box-shadow: 4px 4px 8px #d2d4d8, -4px -4px 5px #ffffff;
+}
+.PostCard:hover {
+  box-shadow: inset 8px 8px 16px #c2c6cc, inset -7px -7px 17px #ffffff;
+}
+
+.PostCard:hover .PostCard--Image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow:inset 6px 6px 17px rgba(0, 0, 0, 0.5);
+}
+
+.PostCard--Link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.PostCard--Image {
+  margin: 0 0 2.5rem auto;
+  height: 18rem;
+  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+  overflow: hidden;
+}
+
+.PostCard--Title {
+  margin: 0;
+}
+
+.PostCard--Content {
+  display: flex;
+  flex-flow: column;
+  padding: 0 2.5rem 2.5rem;
+}
+
+.PostCard--Categories {
+  display: flex;
+  flex-flow: row;
+}
+
+.PostCard--Category {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  min-height: 1.2em;
+  line-height: 1;
+  margin: 0.5em 1em 0.5em 0;
+  padding: 0.5em;
+  border-radius: var(--borderRadius);
+  background-color: var(--primary);
+  z-index: 2;
+}
+.PostCard--Category:hover,
+.PostCard--Category:focus {
+  box-shadow: 4px 4px 8px var(--boxshadowPrimaryDark) inset,
+    -2px -2px 4px var(--boxshadowPrimaryLight) inset;
+}
+
+.PostCard--Day {
+  color: var(--midGrey);
+}
+
+@media (max-width: 560px) {
+  .PostCard--Image {
+    height: 8rem;
+  }
+  .PostCard {
+    box-shadow: 3px 3px 6px var(--boxshadowGrey), -3px -3px 6px #ffffff;
+  }
+}

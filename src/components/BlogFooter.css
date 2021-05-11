@@ -1,0 +1,65 @@
+.BlogFooter {
+  background-color: var(--background);
+}
+.BlogFooter--Info {
+  display: flex;
+  margin: 20rem 0 10rem;
+}
+
+.BlogFooter--Tags {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 100%;
+}
+
+.TagIcon {
+  background:var(--background);
+  text-align: center;
+  color: var(--primary);
+  font-size: 4rem;
+  width: 4rem;
+  height: 4rem;
+  box-shadow: 2px 2px 4px var(--boxshadowGrey), -2px -2px 4px #ffffff;
+  border-radius: 50%;
+  margin: -7rem -0.5rem 1rem;
+  padding: 20px 5px;
+}
+
+.TagButtons{
+  display: flex;
+  flex-wrap: wrap;
+}
+.TagButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: var(--borderRadius);
+  outline: 0;
+  margin: auto 1rem 1rem 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 2px 2px 6px var(--boxshadowGrey), -2px -2px 6px #ffffff;
+  background-color: var(--primary);
+}
+.TagButton:hover {
+  box-shadow: 2px 2px 4px var(--boxshadowPrimaryDark) inset,
+    -4px -4px 8px var(--boxshadowPrimaryLight) inset;
+}
+
+@media screen and (max-width: 960px) {
+  .BlogFooter--Tags {
+    width: 47.5%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .BlogFooter--Info {
+    flex-wrap: wrap;
+  }
+  .BlogFooter--Tags {
+    width: 100%;
+  }
+}

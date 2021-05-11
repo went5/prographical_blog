@@ -1,0 +1,183 @@
+.MainSingle {
+  background-color: var(--background);
+  padding-top: 4rem;
+}
+
+.SinglePost {
+  background: var(--background);
+}
+
+.SinglePost--Grid {
+  display: grid;
+  max-width: 1200px;
+  /*grid-template-columns:800px 200px;*/
+  grid-auto-flow: row;
+  grid-auto-columns: 1000px 200px;
+  margin: 0 auto;
+}
+
+.SinglePost--Content {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background: white;
+  padding: 0 4rem;
+  max-width: 1000px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Toc--Side {
+  position: sticky;
+  position: -webkit-sticky;
+  max-height: 100vh;
+  overflow-y: auto;
+  will-change: transform;
+  top: 1.2rem;
+  margin-top: 6.4rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  border: none;
+}
+
+.Toc--Side ul {
+  font-size: 1.6rem;
+  list-style: none;
+}
+.Toc--Side a {
+  color: var(--midGrey);
+}
+.Toc--Side li {
+  padding: 4px 8px;
+}
+
+.SinglePost--Image {
+  margin: 3rem auto 5rem;
+  height: 20rem;
+}
+
+/*記事タイトル*/
+.SinglePost--Content h1 {
+  font-size: 3.2rem;
+  margin: 2rem 0 0;
+}
+
+@media screen and (max-width: 960px) {
+  .SinglePost--Content {
+    padding: 4rem 2rem;
+  }
+}
+
+.SinglePost--Title {
+  line-height: 1.2;
+}
+
+.SinglePost--Day {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
+.SinglePost--Categories {
+  font-size: 2rem;
+  margin: 0 0 2rem 0;
+}
+.SinglePost--Category {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  min-height: 1.2em;
+  line-height: 1;
+  margin: 0.5em 1em 0.5em 0;
+  padding: 0.5em;
+  border-radius: var(--borderRadius);
+  background-color: var(--primary);
+  z-index: 2;
+  box-shadow: 2px 2px 4px var(--boxshadowGrey), -2px -2px 6px white;
+}
+
+.SinglePost--Category:focus,
+.SinglePost--Category:hover {
+  box-shadow: 4px 4px 8px var(--boxshadowPrimaryDark) inset,
+    -2px -2px 4px var(--boxshadowPrimaryLight) inset;
+}
+
+.SinglePost--InnerContent {
+  padding: 3rem 0 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 960px) {
+  .SinglePost--InnerContent {
+    padding: 0;
+  }
+}
+
+.SinglePost--Pagination {
+  margin: 4rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SinglePost--Pagination--Link {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.SinglePost--Pagination--Link.next {
+  margin-left: auto;
+}
+.RelatedPosts {
+  margin: 2rem 0;
+}
+
+.LatestPosts {
+  margin: 2rem 0;
+}
+
+.PostsFooter {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  grid-row: 2/3;
+  padding: 2em 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .MainSingle {
+    padding: 1em;
+  }
+  .SinglePost--Grid {
+    grid-template-columns: minmax(420px, 820px) 1fr;
+  }
+  .SinglePost--Content {
+    grid-column: 1/2;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .Toc--Side {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .SinglePost--Image {
+    margin: 0;
+  }
+  .SinglePost--Content {
+    padding: 2em 1.5rem;
+  }
+  .PostsFooter {
+    padding: 2rem 1.5rem;
+  }
+  .SinglePost--Grid {
+    grid-template-columns: minmax(0, 720px);
+  }
+  .Toc--Side {
+    display: none;
+  }
+}

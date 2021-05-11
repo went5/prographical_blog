@@ -1,0 +1,105 @@
+.Share {
+  display: flex;
+  padding: 1rem 0;
+  width: 50%;
+}
+
+.ShareTwitter {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px var(--boxshadowGrey), -4px -4px 6px #ffffff;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem;
+  margin-left: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white !important;
+  background: #55acee !important;
+}
+
+.ShareTwitter:hover {
+  box-shadow: 2px 2px 4px #3c7bac inset, -4px -4px 8px #62c6ff inset;
+}
+
+.SharePintarest {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px var(--boxshadowGrey), -4px -4px 6px #ffffff;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem;
+  margin-left: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white !important;
+  background: #ce0f19 !important;
+}
+
+.SharePintarest:hover {
+  box-shadow: 2px 2px 4px #8f0a11 inset, -4px -4px 6px #ed111d inset;
+}
+
+.ShareFaceBook {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px var(--boxshadowGrey), -4px -4px 6px #ffffff;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem;
+  margin-left: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white !important;
+  background: #3b5998 !important;
+}
+
+.ShareFaceBook:hover {
+  box-shadow:2px 2px 4px #1e3668 inset,  -4px -4px 6px #5a73aa inset;
+}
+
+.ShareHatebu:before {
+  content: 'B!';
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: white;
+  position: relative;
+  top: -1px;
+}
+
+.ShareHatebu {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px var(--boxshadowGrey), -4px -4px 6px #ffffff;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  margin-left: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: #008fde;
+}
+
+.ShareHatebu:hover {
+  box-shadow: 8px 8px 12px #0069a1 inset,
+    -8px -8px 12px #00a4ff inset;
+}
+
+@media (max-width: 560px) {
+  .Share {
+    width: 100%;
+  }
+}

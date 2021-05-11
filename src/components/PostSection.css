@@ -1,0 +1,74 @@
+.PostSection {
+}
+
+.PostSection--Grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.PostSection button {
+  border: none;
+  border-radius: 44px;
+  color:white;
+  background-color: var(--primary);
+  margin-top: 1rem;
+  margin-top: 5rem;
+  padding: 1.25rem 8rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px var(--boxshadowGrey), -3px -3px 6px white;
+}
+
+.PostSection button:hover {
+  box-shadow:4px 4px 8px var(--boxshadowPrimaryDark) inset,-4px -4px 8px var(--boxshadowPrimaryLight) inset;
+}
+
+.PostSection--Grid > * {
+  width: calc(33.33% - 2rem);
+  margin-bottom: 4rem;
+}
+
+@supports (display: grid) {
+  .PostSection--Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+  }
+
+  .PostSection--Grid > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.PostSection--Title {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 960px ) {
+  .PostSection--Grid > * {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    display: block;
+  }
+
+  @supports (display: grid) {
+    .PostSection--Grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  @supports (display: grid) {
+    .PostSection--Grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
