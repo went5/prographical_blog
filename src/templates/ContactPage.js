@@ -6,15 +6,12 @@ import './ContactPage.css'
 import 'typeface-cinzel'
 
 // Export Template for use in CMS preview
-export const ContactPageTemplate = () => (
+const ContactPageTemplate = () => (
   <main className="Contact">
     <section className="section thin">
       <div className="container">
         <div className="Contact--Header">
-          <div
-            className="PageTitle"
-            style={{ fontFamily: 'Cinzen,serif' }}
-          >
+          <div className="PageTitle" style={{ fontFamily: 'Cinzen,serif' }}>
             Contact
           </div>
         </div>
@@ -22,7 +19,7 @@ export const ContactPageTemplate = () => (
     </section>
     <section className="Contact--Section">
       <div className="container Contact--Section--Container">
-          <FormSimpleAjax name="Simple Form Ajax" />
+        <FormSimpleAjax name="Simple Form Ajax" />
       </div>
     </section>
   </main>

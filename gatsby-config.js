@@ -16,13 +16,13 @@ module.exports = {
     profileIcon: `static/images/profileicon.png`
   },
   plugins: [
-    {
+    /*{
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
         head: true,
       }
-    },
+    },*/
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
     {
@@ -46,31 +46,6 @@ module.exports = {
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',
         icon: `${__dirname}/static/images/favicon.svg` // This path is relative to the root of the site.
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        runtimeCaching: [
-          {
-            // Use cacheFirst since these don't need to be revalidated (same RegExp
-            // and same reason as above)
-            urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `cacheFirst`
-          },
-          {
-            // Add runtime caching of various other page resources
-            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-            handler: `staleWhileRevalidate`
-          },
-          {
-            // google photo
-            urlPattern: /^https?:..lh3.googleusercontent.com[\w/:%#\$&\?\(\)~\.=\+\-]+/,
-            handler: `staleWhileRevalidate`
-          }
-        ],
-        skipWaiting: true,
-        clientsClaim: true
       }
     },
     `gatsby-plugin-robots-txt`,
@@ -120,7 +95,6 @@ module.exports = {
             }
           },
           `gatsby-remark-responsive-iframe`,
-          `gatsby-remark-prismjs`
         ]
       }
     },
@@ -128,12 +102,12 @@ module.exports = {
     // css (replace with gatsby-plugin-sass for v2)
     {
       resolve: `gatsby-plugin-sass`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        postCssPlugins: [
-          postcssPresetEnv({
-            browsers: '> 0.5%, last 2 versions, ie 11'
-          })
-        ]
+        // Setting a color is optional.
+        color: 'white',
+        // Disable the loading spinner.
+        showSpinner: false
       }
     },
     {
@@ -146,15 +120,7 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        // Setting a color is optional.
-        color: 'white',
-        // Disable the loading spinner.
-        showSpinner: false
-      }
-    },
+    
     'gatsby-plugin-netlify', // make sure to keep it last in the array
     {
       resolve: 'gatsby-remark-related-posts',

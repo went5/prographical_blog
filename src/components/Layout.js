@@ -7,7 +7,7 @@ import Footer from './Footer'
 import 'modern-normalize/modern-normalize.css'
 import './globalStyles.css'
 
-export default ({ children, meta, title }) => {
+const Layout = ({ children, meta, title }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -72,3 +72,4 @@ export default ({ children, meta, title }) => {
     />
   )
 }
+export default Layout

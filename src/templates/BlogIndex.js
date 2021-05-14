@@ -6,14 +6,14 @@ import PostSection from '../components/PostSection'
 import BlogFotter from '../components/BlogFooter'
 import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 /**
  * Filter posts by date. Feature dates will be fitered
  * When used, make sure you run a cronejob each day to show schaduled content. See docs
  *
  * @param {posts} object
  */
-export const byDate = (posts) => {
+const byDate = (posts) => {
   const now = Date.now()
   return posts.filter((post) => Date.parse(post.date) <= now)
 }
@@ -25,7 +25,7 @@ export const byDate = (posts) => {
  * @param {title} string
  * @param {contentType} string
  */
-export const byCategory = (posts, title, contentType) => {
+const byCategory = (posts, title, contentType) => {
   const isCategory = contentType === 'Category'
   const byCategory = (post) =>
     post.categories.filter((cat) => cat === title.toLowerCase()).length
@@ -33,7 +33,7 @@ export const byCategory = (posts, title, contentType) => {
 }
 
 // Export Template for use in CMS preview
-export const BlogIndexTemplate = ({
+const BlogIndexTemplate = ({
   title,
   subtitle,
   featuredImage,
@@ -66,10 +66,7 @@ export const BlogIndexTemplate = ({
 
       return (
         <main className="Blog">
-          <SEO
-            title={title}
-            pathname={'/'}
-          />
+          <Seo title={title} pathname={'/'} />
           <section className="section thin">
             <div className="container">
               <PostCategoriesNav enableSearch categories={title} />

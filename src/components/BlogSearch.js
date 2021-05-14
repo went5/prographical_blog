@@ -3,7 +3,7 @@ import { navigate } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 
-export default () => {
+const BlogSearch= () => {
   return (
     <Location>
       {({ location }) => {
@@ -27,3 +27,5 @@ export default () => {
     </Location>
   )
 }
+
+export default BlogSearch;

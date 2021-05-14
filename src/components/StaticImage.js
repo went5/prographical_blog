@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 // 画像ファイルパスをプロパティに取るようなコンポーネントを定義
-export default ({ filename, className }) => (
+const StaticImage = ({ filename, className }) => (
   // ページじゃないコンポーネントでもGraphQLが使えるように
   // StaticQueryタグを使う
   <StaticQuery
@@ -40,3 +40,4 @@ export default ({ filename, className }) => (
     }}
   />
 )
+export default StaticImage

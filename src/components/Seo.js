@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-const SEO = ({ title, desc, thumbnail, pathname, article }) => (
+const Seo = ({ title, desc, thumbnail, pathname, article }) => (
   <StaticQuery
     query={query}
     render={({
@@ -79,7 +79,7 @@ const SEO = ({ title, desc, thumbnail, pathname, article }) => (
       return (
         <>
           <Helmet title={seo.title}>
-            <html lang='ja' />
+            <html lang="ja" />
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             <meta name="apple-mobile-web-app-title" content={shortName} />
@@ -110,9 +110,9 @@ const SEO = ({ title, desc, thumbnail, pathname, article }) => (
 //   }
 // }
 
-export default SEO
+export default Seo
 
-SEO.propTypes = {
+Seo.propTypes = {
   title: PropTypes.string,
   desc: PropTypes.string,
   thumbnail: PropTypes.string,
@@ -120,7 +120,7 @@ SEO.propTypes = {
   article: PropTypes.bool
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   title: null,
   desc: null,
   thumbnail: null,
@@ -129,7 +129,7 @@ SEO.defaultProps = {
 }
 
 const query = graphql`
-  query SEO {
+  query Seo {
     site {
       buildTime(formatString: "YYYY-MM-DD")
       siteMetadata {

@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
-import { ChevronLeft } from 'react-feather'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SinglePost.css'
@@ -10,9 +9,9 @@ import ShareButton from '../components/ShareButton'
 import ProfileCard from '../components/ProfileCard'
 import PostSection from '../components/PostSection'
 import BlogFotter from '../components/BlogFooter'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 
-export const SinglePostTemplate = ({
+const SinglePostTemplate = ({
   title,
   excerpt,
   featuredImage,
@@ -26,7 +25,7 @@ export const SinglePostTemplate = ({
   postCategories = []
 }) => (
   <main className="MainSingle">
-    <SEO
+    <Seo
       title={title}
       desc={excerpt}
       thumbnail={`${featuredImage}w1000`}

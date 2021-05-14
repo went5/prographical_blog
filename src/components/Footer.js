@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 
-export default () => (
+const Footer =() => (
   <div className="credit">
     <div className="container taCenter">
       <span>
@@ -11,3 +11,4 @@ export default () => (
     </div>
   </div>
 )
+export default Footer
